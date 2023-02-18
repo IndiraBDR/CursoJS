@@ -26,7 +26,7 @@
 // num4= curso elegido
 
 
- function calculadoraDeHoras (num1,num2,num3,num4){
+ //function calculadoraDeHoras (num1,num2,num3,num4){
 
    switch (num4) {
 
@@ -50,16 +50,26 @@
           break;
    }
 
- }
+// }
 
-  let cursoElegido = prompt("Ingrese la letra del curso elegido: a.Finanzas Personales, b.Finanzas para Empresa");
+  //let cursoElegido = prompt("Ingrese la letra del curso elegido: a.Finanzas Personales, b.Finanzas para Empresa");
         
-  let horasDeDuracionCursoA = 30;
+ // let horasDeDuracionCursoA = 30;
 
-  let horasDeDuracionCursoB = 50;
+ // let horasDeDuracionCursoB = 50;
 
-  let horasDedicadas = Number(prompt("Ingrese horas que dedicara al curso"));
+ // let horasDedicadas = Number(prompt("Ingrese horas que dedicara al curso"));
 
-  let resultado = ` El resultado es ${calculadoraDeHoras (horasDedicadas,horasDeDuracionCursoA,horasDeDuracionCursoB,cursoElegido)}`;
+  //let resultado = ` El resultado es ${calculadoraDeHoras (horasDedicadas,horasDeDuracionCursoA,horasDeDuracionCursoB,cursoElegido)}`;
 
-  alert(resultado);
+ // alert(resultado);
+
+
+
+ let costoCurso = Number(prompt("Ingrese el Costo del curso"));
+
+ const iva =(Y)=> Y * 0.21;
+
+
+
+ let IVA = iva(costoCurso);
