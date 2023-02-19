@@ -12,6 +12,37 @@
 //Z= iva(Y)
 
 
+function calculadoraDeDescuento (num1,num2,num3,num4){
+          
+  switch (num4) {
+
+   case "a":
+
+   return num1 - num2;
+   
+     break;
+
+
+   case "b":
+   
+   return  num1 - num3;
+
+    break;
+
+   default:
+
+    return "Descuento no identificado"
+
+   break;
+
+   }
+
+  }
+
+  const iva =(Y)=> Y * 0.21;
+  const precioConIva = (X,Z) => X + Z;
+
+
 let edad = Number(prompt("Ingrese Edad"));
 
 if (edad >= 18) {
@@ -28,41 +59,15 @@ if (edad >= 18) {
     
        while (entrada  == "si") {
       
-        function calculadoraDeDescuento (num1,num2,num3,num4){
-          
-        switch (num4) {
-
-         case "a":
-
-         return num1 - num2;
-         
-           break;
-
-
-         case "b":
-         
-         return  num1 - num3;
-
-          break;
-  
-         default:
-
-          return "Descuento no identificado"
-
-         break;
- 
-         }
-
-        }
+       
         
-
+        calculadoraDeDescuento (costoCurso,descuentoA,descuentoB,descuentoAsignado);
      
-        const iva =(Y)=> Y * 0.21;
+       
 
         let costoCurso = Number(prompt("Ingrese el costo del curso"));
 
 
-        const precioConIva = (X,Z) => X + Z;
 
         let IVA = iva(costoCurso);
 
