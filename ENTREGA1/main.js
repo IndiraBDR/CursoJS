@@ -1,6 +1,7 @@
 
 
-//calcular el tiempo de realizacion del curso dependiendo del curso y las horas dedicadas
+//calcular el precio de un curso con iva y descuento, 
+//dependiendo del descuento asignado y el costo del curso sin iva, una vez pasados todos los paramentros de  ingreso al curso
 
 
 // num1=  Costo curso
@@ -58,21 +59,13 @@ if (edad >= 18) {
        let entrada= prompt("Desea calcular su pago total con el descuento asignado")
     
        while (entrada  == "si") {
-      
-       
-        
-        calculadoraDeDescuento (costoCurso,descuentoA,descuentoB,descuentoAsignado);
-     
-       
+    
 
         let costoCurso = Number(prompt("Ingrese el costo del curso"));
-
-
 
         let IVA = iva(costoCurso);
 
         let precioTotal = precioConIva(costoCurso,IVA)
-
 
         let descuentoAsignado = prompt("Ingrese la letra del descuento asignado: a o b");
        
@@ -97,8 +90,6 @@ if (edad >= 18) {
         
         alert("Lo sentimos no puedes registrarte al curso, es solo para mujeres");
     }
-
-
 
 
 } else {
