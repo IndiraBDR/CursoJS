@@ -79,22 +79,24 @@ class ProductoCurso{
 
     }
 
-    vender(){
+  
 
-        if(this.cantidad > 0){
-
-            this.cantidad -= 1;
-
-        } else{
-
-            console.log("se acabo");
+    vender(valorDelPrompt) {
+        if (this.cantidad >= valorDelPrompt) {
+            this.cantidad -= valorDelPrompt;
+            console.log(this.cantidad)
+            if(this.cantidad==0){
+                alert('sin stock')
+            }
         }
-        
+       else if(this.cantidad<valorDelPrompt){
+        alert('no tenemos ese stock')
+
+       }
     }
 
-
-  
 }
+
 
 
 const producto1 = new ProductoCurso(
@@ -128,8 +130,8 @@ const producto3 = new ProductoCurso(
 );
 
 let nombreProducto4 = prompt("Ingrese nombre");
-let precioProducto4 = prompt("Ingrese precio");
-let cantidadProducto4 = prompt("Ingrese cantidad");
+let precioProducto4 = Number (prompt("Ingrese precio"));
+let cantidadProducto4 = Number(prompt("Ingrese cantidad"));
 
 const producto4 = new ProductoCurso(
 
@@ -142,14 +144,15 @@ const producto4 = new ProductoCurso(
 );
 
 
-const Productos=[producto1,producto2]
+const Productos=[producto1,producto2,producto3]
 
-Productos.push(producto3);
+Productos.push(producto4);
 
 console.log(Productos);
 
 
 producto1.vender()
+producto2.vender()
 console.log(Productos);
 
 
