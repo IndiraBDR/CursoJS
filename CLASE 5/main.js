@@ -81,18 +81,17 @@ class ProductoCurso{
 
   
 
-    vender(valorDelPrompt) {
-        if (this.cantidad >= valorDelPrompt) {
-            this.cantidad -= valorDelPrompt;
-            console.log(this.cantidad)
-            if(this.cantidad==0){
-                alert('sin stock')
-            }
-        }
-       else if(this.cantidad<valorDelPrompt){
-        alert('no tenemos ese stock')
+      vender(){
 
-       }
+        if(this.cantidad > 0){
+
+            this.cantidad -= 1;
+
+        } else{
+
+            console.log("se acabo");
+        }
+
     }
 
 }
@@ -148,15 +147,30 @@ const Productos=[producto1,producto2,producto3]
 
 Productos.push(producto4);
 
+//console.log(Productos);
+
+
+//producto1.vender()
+//producto2.vender()
+//console.log(Productos);
+
+Y= prompt('Escriba el nombre del producto')
+
+switch (Y) {
+case "A":
+
+producto1.vender();
+
+break;
+
+case "B":
+
+producto2.vender();
+
+break;
+}
+
 console.log(Productos);
-
-
-producto1.vender()
-producto2.vender()
-console.log(Productos);
-
-
-
 
 
 
@@ -167,6 +181,7 @@ console.log(Productos);
 
 function calculadoraDeStock (Y){
 
+Y= prompnt    
 switch (Y) {
     case "A":
 
@@ -183,7 +198,7 @@ switch (Y) {
     default:
         break;
 }
-}
+
 
 let tipoDeCurso = "A";
 
