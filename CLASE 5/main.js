@@ -128,6 +128,7 @@ const producto3 = new ProductoCurso(
     }
 );
 
+
 let nombreProducto4 = prompt("Ingrese nombre");
 let precioProducto4 = Number (prompt("Ingrese precio"));
 let cantidadProducto4 = Number(prompt("Ingrese cantidad"));
@@ -143,20 +144,54 @@ const producto4 = new ProductoCurso(
 );
 
 
-const Productos=[producto1,producto2,producto3]
-
-Productos.push(producto4);
-
-//console.log(Productos);
 
 
-//producto1.vender()
-//producto2.vender()
-//console.log(Productos);
+const Productos=[producto1,producto2, producto3]
+
+/Productos.push(producto4);
+
+console.log(Productos);
+
+
+producto1.vender()
+producto2.vender()
+console.log(Productos);
+
+
+
+
+/* PRACTICANDO CONDICIONALES
 
 Y= prompt('Escriba el nombre del producto')
 
-switch (Y) {
+if(Y === "A"){
+
+ producto1.vender();    //**** PARA ACCEDER A LA EJECUCION DEl METODO 'OBJETO.METODO'****
+alert(producto1.cantidad); //**** PARA ACCEDER AL VALOR 'OBJETO.CLAVE'****
+
+}
+
+//else{(Y === "B");{alert(producto2.cantidad)}};
+
+
+if(Y === "B"){
+    producto2.vender();
+    alert(producto2.cantidad);
+    
+}
+
+
+
+if(Y === "C"){
+    alert("x");
+    
+}
+
+*/
+
+
+
+/*switch (Y) {
 case "A":
 
 producto1.vender();
@@ -169,41 +204,4 @@ producto2.vender();
 
 break;
 }
-
-console.log(Productos);
-
-
-
-
-/*PROBANDO
-
-//Y= tipoDeCurso
-
-function calculadoraDeStock (Y){
-
-Y= prompnt    
-switch (Y) {
-    case "A":
-
-      producto1.vender();
-        
-        break;
-
-    case "B":
-       
-    producto2.vender();
-        
-        break;
-
-    default:
-        break;
-}
-
-
-let tipoDeCurso = "A";
-
-let resultado = calculadoraDeStock(tipoDeCurso);
-
-console.log(resultado);
-
 */
