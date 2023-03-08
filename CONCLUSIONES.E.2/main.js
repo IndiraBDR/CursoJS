@@ -104,7 +104,6 @@ do {
 
 
 
-
-
+-- El filter medevuelve un nuevo arreglo con los elemntos que cumplieron con la condicion, estos elementos en general son objetos y la web no sabe leer objetos por lo cual debo tranasformar los elementos de el array devuelto del filter, transformarlos de objetos a los valores del objeto que accedo a traves de la notacion ., debo hacer .nombre por ejemplo a todos los elemntos del array devuelto por  el filter y esto lo puedo hacer con el map, ya que recorre el array devuelto por el filter, aplica la modificiacion que me le pase por parametro y medevuelve el array con el resultado, en este caso el valor que necesito que seria elnombre 
 
 */
