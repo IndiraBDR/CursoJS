@@ -2,7 +2,7 @@
 
 
 
-let edad = Number(prompt("Ingrese Edad"));
+/*let edad = Number(prompt("Ingrese Edad"));
 
 if (edad >= 18) {
     
@@ -17,9 +17,12 @@ if (edad >= 18) {
         let entrada= prompt("Desea buscar cursos");
      
         if (entrada.toLowerCase() === "si") {
+
+*/          
           class Curso {
             constructor(datos) {
               this.nombre = datos.nombreProducto;
+              this.descripcion= datos.descripcionProducto
               this.precio = datos.precioProducto;
               this.cantidad = datos.cantidadProducto;
             }
@@ -31,24 +34,53 @@ if (edad >= 18) {
 
           const producto1 = new Curso({
             nombreProducto: "Desarrollo Personal",
+            descripcionProducto: "  En todo ser humano hay grandeza y potencial, si alguien mas pudo hacerlo es la prueba de que si se puede",
             precioProducto: 2000,
             cantidadProducto: 5,
           });
 
           const producto2 = new Curso({
             nombreProducto: "Ingresos Extra",
+            descripcionProducto: "La Educación financiera nos enseña que requerimos tener al menos 7 fuentes de ingresos para construir solides en nuestra economia",
             precioProducto: 1000,
             cantidadProducto: 5,
           });
 
           const producto3 = new Curso({
             nombreProducto: "Finanzas Personales",
+            descripcionProducto: "Es primordial definir un presupuesto organizado mensual, ademas de definir nuestras deusas y plan para saldarlas, para comenzar a invertir",
             precioProducto: 1500,
             cantidadProducto: 5,
           });
 
           const cursos = [producto1, producto2, producto3];
 
+//nuevooooo
+
+
+let contenedor= document.getElementById("contenedor__servicios");
+  
+ cursos.forEach(item => {
+    let div = document.createElement("div");
+    div.innerHTML = `
+      <h1>${item.nombre}</h1>
+     <p>${item.descripcion}</p>
+     <b>$${item.precio}</b>
+     <p>${item.cantidad}</p>
+   
+   `;
+  
+    contenedor.append(div);
+
+    
+   })
+  
+   contenedor.getElementById="contenedor__servicios"
+
+//nuevooooooo
+
+
+/*
           let opcion;
           do {
             opcion = Number(
@@ -126,4 +158,4 @@ if (edad >= 18) {
 
    
 
-
+*/
