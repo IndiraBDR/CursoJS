@@ -14,7 +14,7 @@ body{
 }
 
 
-#contenedor__teayudo {
+.contenedor__teayudo {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, auto);
@@ -33,7 +33,7 @@ body{
 
 }
 
-#cabecera__teayudo {
+.cabecera__teayudo {
 
     grid-area: cabeteayudo;
     
@@ -52,7 +52,7 @@ body{
 }
 
 
-#titulo__teayudo {
+.titulo__teayudo {
     grid-area: tteayudo;
     text-align: center;
     margin-top: 20px;

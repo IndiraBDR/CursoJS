@@ -229,7 +229,9 @@
 
 /* CONTENIDO CENTRAL DE LA PAGINA TE AYUDO*/
 
-#contenedor__servicios {
+
+
+.contenedor__servicios {
     grid-area: contenservicios;
     display: flex;
     flex-direction: column;
@@ -249,12 +251,18 @@
         width: calc(e.$ancho-box/3);
         height:e.$alto-box;
         margin-top: 50px;
-        color: white;
+        color: #594a4e;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
        
         border:8px double #ff8ba7;
+        
+        font-size: small;
+
+        h1{
+           font-size: xx-large;
+        }
 
         p{
            color: map-get(e.$colores,"texto");
@@ -284,28 +292,32 @@
 
               border-radius: 20px;
               text-align: center;
-              width: calc(e.$ancho-box-desktop/3);
-              height: e.$alto-box;
+              width: calc(e.$ancho-box/3);
+              height:e.$alto-box;
               padding-top: 30px;
+
+              
         
           }
 
              
-           :nth-child(2) {
+           .servicio:nth-child(2) {
         
                 height: calc(e.$alto-box + 50px);
                   
      
            }
               
-
+          
     }
     
 
 }
 
 
-#carrousel__teayudo {
+
+
+.carrousel__teayudo {
     grid-area: carroteayudo;
     margin-left: 30px;
     margin-right: 30px;
