@@ -24,41 +24,43 @@ if (edad >= 18) {
 //nuevooooo
 
 
-let contenedorGeneral = document.getElementById("contenedor__teayudo");
+//let contenedorGeneral = document.getElementById("contenedor__teayudo");
 
-contenedorGeneral.className = "contenedor__teayudo";
+//contenedorGeneral.className = "contenedor__teayudo";
 
 // Agregar la clase al elemento, es lo mismo decir:
 //contenedorGeneral.classList.add("contenedor__teayudo");
 
 
-let cabecera = document.getElementById("cabecera__teayudo");
+//let cabecera = document.getElementById("cabecera__teayudo");
 
-cabecera.className = "cabecera__teayudo";
-
-
-
-let titulo = document.getElementById("titulo__teayudo");
-
-titulo.className = "titulo__teayudo";
+//cabecera.className = "cabecera__teayudo";
 
 
 
-let contenedorServicios = document.getElementById("contenedor__servicios");
+//let titulo = document.getElementById("titulo__teayudo");
 
-contenedorServicios.className = "contenedor__servicios";
-
-
+//titulo.className = "titulo__teayudo";
 
 
-let carrousel = document.getElementById("carrousel__teayudo");
 
-carrousel.className = "carrousel__teayudo";
+//let contenedorServicios = document.getElementById("contenedor__servicios");
+
+//contenedorServicios.className = "contenedor__servicios";
 
 
-let pie = document.getElementById("pie");
 
-pie.className = "pie";
+
+//let carrousel = document.getElementById("carrousel__teayudo");
+
+//carrousel.className = "carrousel__teayudo";
+
+
+//let pie = document.getElementById("pie");
+
+//pie.className = "pie";
+
+
 
 
 
@@ -102,7 +104,7 @@ const cursos = [producto1, producto2, producto3];
 
 
 
-
+let contenedorServicios = document.getElementById("contenedor__servicios");
   
 
 
