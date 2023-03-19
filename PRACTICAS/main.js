@@ -56,6 +56,8 @@ const cursos = [
 
 */
 
+
+/*
 let entrada = prompt("Desea BUSCAR CURSOS");
 
 if (entrada.toLowerCase() === "si") {
@@ -146,6 +148,8 @@ if (entrada.toLowerCase() === "si") {
 } else {
   alert("Perfecto que tengas Buen Dias");
 }
+
+*/
 
 
 
@@ -261,4 +265,54 @@ switch (opcion) {
 
 
 
+*/
+
+
+let usuario;
+
+let usuarioStorage = sessionStorage.getItem("usuario");
+
+
+if(usuarioStorage){
+
+usuario = usuarioStorage;
+
+alert(`Bienvenido ${usuario}`)
+
+}else{
+
+  usuario= prompt ("Ingrese usuario");
+  
+  
+  alert(`Hola ${usuario} 1era vez`)
+
+  sessionStorage.setItem("usuario", usuario);
+
+
+}
+
+/*
+
+
+ //NO FUNCIONA
+
+if(usuarioStorage){
+
+  usuario= prompt ("Ingrese usuario");
+  
+  
+  alert(`Hola ${usuario} 1era vez`)
+
+  localStorage.setItem("usuario", usuario);
+
+
+}else{
+
+  usuario = usuarioStorage;
+
+  alert(`Bienvenido ${usuario}`)
+
+
+
+};
 */

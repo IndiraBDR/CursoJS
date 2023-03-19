@@ -1,65 +1,140 @@
 
 
-//nuevooooo
 
-class Curso {
-  constructor(datos) {
-    this.nombre = datos.nombreProducto;
-    this.descripcion = datos.descripcionProducto;
-    this.precio = datos.precioProducto;
-    this.cantidad = datos.cantidadProducto;
-  }
+//IGNORAR COMENT SIGUIENTE
+/* EJEMPLO PROFE. MOSTRAR EL PRDUCTO SELECIONADO POR EL ID DEL BOTON
+const agregarProducto = (x) => {
+  
+  let productoAgregado = cursos.find(item => item.id === x);
 
-  PrecioConIVA() {
-    return this.precio * 1.21;
-  }
-}
+  localStorage.setItem("carrito",JSON.stringify(productoAgregado));
 
-const producto1 = new Curso({
-  nombreProducto: "Desarrollo Personal",
-  descripcionProducto:
-    "  En todo ser humano hay grandeza y potencial, si alguien mas pudo hacerlo es la prueba de que si se puede",
-  precioProducto: 2000,
-  cantidadProducto: 5,
-});
+  //carrito = producto arrojado por el find que es 1ero que coincide con el id del boton del producto seleccionado
+};
+*/
 
-const producto2 = new Curso({
-  nombreProducto: "Ingresos Extra",
-  descripcionProducto:
-    "La Educación financiera nos enseña que requerimos tener al menos 7 fuentes de ingresos para construir solides en nuestra economia",
-  precioProducto: 1000,
-  cantidadProducto: 5,
-});
 
-const producto3 = new Curso({
-  nombreProducto: "Finanzas Personales",
-  descripcionProducto:
-    "Es primordial definir un presupuesto organizado mensual, ademas de definir nuestras deusas y plan para saldarlas, para comenzar a invertir",
-  precioProducto: 1500,
-  cantidadProducto: 5,
-});
 
-const cursos = [producto1, producto2, producto3];
+//renderizacion principal
+
 
 let contenedorServicios = document.getElementById("contenedor__servicios");
 
+let carritoDeCompras=[]
+
 cursos.forEach((item) => {
   let div = document.createElement("div");
+  div.className = "servicio";
   div.innerHTML = `
+   <strong>${item.id}</strong> 
    <h1>${item.nombre}</h1>
+   <img src ="${item.imagen}">
    <p>Descripcion: ${item.descripcion}</p>
    <b>$${item.precio}</b>
    <p>Cantidad: ${item.cantidad}</p>
    
  `;
 
+ 
+
   contenedorServicios.append(div);
 
-  div.className = "servicio";
+  
+
+  let botonAgregar= document.createElement("button");
+
+  botonAgregar.innerText = "Agregar";
+
+  botonAgregar.className = "Boton-agregar";
+
+  div.append(botonAgregar);
+
+
+  /* IGNORAR COMENT
+  const agregarProducto = () => {
+    carritoDeCompras.push({
+
+      id: item.id,
+      imagen: item.imagen,
+      nombre: item.nombre,
+      precio: item.precio,
+  
+    });
+
+ 
+  };
+
+  botonAgregar.addEventListener("click", () => agregarProducto());
+*/
+
+botonAgregar.addEventListener("click", () => {
+
+  carritoDeCompras.push({
+
+    id: item.id,
+    imagen: item.imagen,
+    nombre: item.nombre,
+    precio: item.precio,
+
+  });
+
+   
+  localStorage.setItem("carrito",JSON.stringify(carritoDeCompras))
+
+ //for(let i =0; i < carritoDeCompras.length; i ++){
+      
+ //localStorage.setItem("carrito",JSON.stringify(carritoDeCompras[i]));
+
+
+});
+
+  
+
+
+  //console.log(carritoDeCompras);
 });
 
 
 
+
+
+
+
+
+
+
+//CARRITO EJ DEL PROFESOR
+
+/*
+let carrito = [];
+let carritoStorage = localStorage.getItem("carrito");
+
+if (carritoStorage) {
+  carrito = JSON.parse(carritoStorage);
+} else {
+  let div = document.createElement("div");
+  div.innerHTML = "El carrito está vacio";
+  document.body.append(div);
+}
+
+carrito.forEach((item) => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+    <h2>Id: ${item.id}</h2>
+    <p>Nombre: ${item.nombre}</p>
+    <b>$${item.precio}</b>
+  `;
+
+  document.body.append(div);
+});
+
+*/
+
+
+
+
+//OPCIONES PARA FILTRAR CONDICIONALES PARA VOLVER A AGREGAR
+/*
 let opcion;
 
 opcion = Number(
@@ -126,12 +201,17 @@ if(opcion === 2){
       div.innerHTML = `
        <h1>${item.nombre}</h1>
        <p>Descripcion: ${item.descripcion}</p>
-       <b>$${item.precio}</b>
+       <b>$${item.PrecioConIVA()}</b>
        <p>Cantidad: ${item.cantidad}</p>
+       <button id = "boton filtrados ${item.id}"> Agregar</button>
        
      `;
     
       filtradosPorPrecio.append(div);
+
+      let botonAgregarFiltrados= document.getElementById(`boton filtrados ${item.id}`);
+
+      botonAgregarFiltrados.addEventListener("click", ()=> agregarProducto(item.id))
     
       
     });
@@ -166,16 +246,26 @@ if(opcion !== 1 && opcion !==2 && opcion !== 3){
 
 }
 
-//nuevooooooo
+*/
 
 
 
 
+/*
+
+let colorContedorServicio= document.getElementById("contenedor__servicios");
 
 
 
 
+colorContedorServicio.addEventListerner("click", () => {
+  
+  colorContedorServicio.className = "rojo";
 
+
+});
+
+*/
 
 
 
