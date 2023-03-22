@@ -60,5 +60,3 @@ formRegistroJs.addEventListener("submit", (e) =>{
 
 
 
-
-
