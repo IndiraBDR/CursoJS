@@ -38,11 +38,13 @@ class Curso {
       "  En todo ser humano hay grandeza y potencial, si alguien mas pudo hacerlo es la prueba de que si se puede",
     precioProducto: 2000,
     cantidadProducto: 5,
-    imagenProducto:"https://uneg.edu.mx/wp-content/uploads/2021/12/9.-Que-es-la-licenciatura-en-finanzas-min-scaled.jpg",
-    //https://uneg.edu.mx/wp-content/uploads/2021/12/9.-Que-es-la-licenciatura-en-finanzas-min-scaled.jpg
+    imagenProducto:" https://www.murcia.com/noticias/fotos/1117655200w2.jpg",
+    //
     // COPIAR DIRECCION DE LA IMAGEN
   
   });
+
+
   
   const producto2 = new Curso({
     idProducto:2,
@@ -51,7 +53,7 @@ class Curso {
       "La Educación financiera nos enseña que requerimos tener al menos 7 fuentes de ingresos para construir solides en nuestra economia",
     precioProducto: 1000,
     cantidadProducto: 5,
-    imagenProducto:"",
+    imagenProducto:"https://lamenteesmaravillosa.com/wp-content/uploads/2016/05/Mujer-pensando-en-sus-proyectos.jpg",
   });
   
   const producto3 = new Curso({
@@ -61,7 +63,7 @@ class Curso {
       "Es primordial definir un presupuesto organizado mensual, ademas de definir nuestras deusas y plan para saldarlas, para comenzar a invertir",
     precioProducto: 1500,
     cantidadProducto: 5,
-    imagenProducto:"",
+    imagenProducto:"https://www.elfinancierocr.com/resizer/LsWuY1CWNdOrREY2KGzzqnsYmFU=/300x0/arc-anglerfish-arc2-prod-gruponacion/public/7UI6MRBEPBHJZOOCZM3B752FFE.jpg",
   });
   
   const cursos = [producto1, producto2, producto3];

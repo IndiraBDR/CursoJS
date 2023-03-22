@@ -476,4 +476,10 @@ body {
 .pie .icon-instagram::before {
   content: "\ea92";
   color: #faeee7;
+}
+
+.formRegistro {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

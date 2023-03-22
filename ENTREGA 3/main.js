@@ -131,6 +131,100 @@ carrito.forEach((item) => {
 */
 
 
+let botonDeFiltroJs = document.getElementById("botonDeFiltro");
+
+const mostrarCursoEncontradoPorNombre = () => {
+
+  const nombreBuscadoJs= document.getElementById("nombreBuscado").value
+
+  const cursoEncontrado = cursos.find(
+    (item) => item.nombre.toLowerCase() === nombreBuscadoJs.toLowerCase()
+  );
+
+  //console.log(cursoEncontrado)
+
+  let mensajeJs = document.getElementById("mensaje");
+
+  if (cursoEncontrado) {
+    mensajeJs.innerHTML = ` 
+ 
+    <h1>Producto encontrado con ese nombre</h1>
+    <p>${cursoEncontrado.nombre}<p>
+    <p>cuesta $ ${cursoEncontrado.PrecioConIVA()} con IVA incluido<p>
+     
+ 
+    `;
+
+
+  } else {
+
+    mensajeJs.innerHTML = ` 
+ 
+     <p>Producto no encontrado<p>`;
+
+   
+
+  }
+
+
+}
+
+
+botonDeFiltroJs.addEventListener("click", ()=> mostrarCursoEncontradoPorNombre());
+
+//xxxxxxxxxxxxx
+
+
+let botonDeFiltroPrecioJs = document.getElementById("botonDeFiltroPrecio");
+
+const mostrarCursoEncontradoPorPrecio = () => {
+
+  const precioBuscadoJs= Number(document.getElementById("precioBuscado").value)
+
+  const cursosFiltradosPorPrecio = cursos.filter(
+    (item) => item.precio <= precioBuscadoJs
+  );
+
+  let mensajePrecioJs = document.getElementById("mensajePrecio");
+
+  if (cursosFiltradosPorPrecio.length>0) {
+
+    
+    
+    cursosFiltradosPorPrecio.forEach((item) =>{
+    mensajePrecioJs.innerHTML  += `
+
+    <h1>${item.nombre}</h1>
+    <p>Descripcion: ${item.descripcion}</p>
+    <b>$${item.PrecioConIVA()}</b>
+    <p>Cantidad: ${item.cantidad}</p>
+  
+    `
+    });
+
+   console.log(cursosFiltradosPorPrecio);
+
+  } else {
+
+    mensajePrecioJs.innerHTML = `
+    
+    No hay productos con ese precio
+    
+    `;
+
+   
+
+  }
+
+
+  
+
+
+}
+
+
+
+botonDeFiltroPrecioJs.addEventListener("click", ()=> mostrarCursoEncontradoPorPrecio());
 
 
 //OPCIONES PARA FILTRAR CONDICIONALES PARA VOLVER A AGREGAR
@@ -158,7 +252,7 @@ if (opcion === 1) {
   if (cursoEncontrado) {
     contenedorElementosFiltrados.innerHTML = ` 
  
-    <h1Producto encontrado con ese nombre</h1>
+    <h1>Producto encontrado con ese nombre</h1>
     <p>${cursoEncontrado.nombre}<p>
     <p>cuesta $ ${cursoEncontrado.PrecioConIVA()} con IVA incluido<p>
      
